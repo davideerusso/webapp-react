@@ -1,3 +1,7 @@
+import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import MovieCard from "./MovieCard";
+
 export default function MoviesList() {
   const movies = [
     {
@@ -66,13 +70,14 @@ export default function MoviesList() {
       <div>
         {movies.map((movie) => (
           <div key={movie.id}>
-            <div>{movie.title}</div>
-            <div>{movie.director}</div>
-            <div>{movie.genre}</div>
-            <div>{movie.release_year}</div>
-            <div>{movie.abstract}</div>
-            <div>{movie.created_at}</div>
-            <div>{movie.updated_at}</div>
+            <h2>{movie.title}</h2>
+            <p>{movie.director}</p>
+            <p>{movie.genre}</p>
+            <p>{movie.release_year}</p>
+            <p>{movie.abstract}</p>
+            <p>{movie.created_at}</p>
+            <p>{movie.updated_at}</p>
+            <Link to={`/Movies/${movie.id}`}>Dettaglio</Link>
           </div>
         ))}
       </div>
