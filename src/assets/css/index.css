@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: rgb(135, 135, 135);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: rgb(214, 214, 214);
+  background-color: rgb(33, 33, 33);
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image {
+  width: 200px;
+}
