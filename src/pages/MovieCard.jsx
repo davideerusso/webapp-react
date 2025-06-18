@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import Reviews from "../components/reviews";
 import { useParams } from "react-router-dom";
 
 export default function MovieCard() {
@@ -23,14 +23,13 @@ export default function MovieCard() {
     <>
       <div key={movie.id}>
         <img src={`http://localhost:3000/movies_cover/${movie.image}`} alt="" />
-        <div>{movie.title}</div>
-        <div>{movie.director}</div>
-        <div>{movie.genre}</div>
-        <div>{movie.release_year}</div>
-        <div>{movie.abstract}</div>
-        <div>{movie.created_at}</div>
-        <div>{movie.updated_at}</div>
+        <h2>{movie.title}</h2>
+        <p>{movie.director}</p>
+        <p>{movie.genre}</p>
+        <p>{movie.release_year}</p>
+        <p>{movie.abstract}</p>
       </div>
+      <Reviews name={movie.name} vote={movie.vote} text={movie.text} />
     </>
   );
 }

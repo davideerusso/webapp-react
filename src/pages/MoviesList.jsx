@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 const apiUrl = "http://localhost:3000/movies";
 
 export default function MoviesList() {
@@ -80,8 +79,9 @@ export default function MoviesList() {
     <>
       <div>
         {movies.map((movie) => (
-          <div key={movie.id}>
+          <div key={movie.id} className="container">
             <img
+              className="image"
               src={`http://localhost:3000/movies_cover/${movie.image}`}
               alt=""
             />
