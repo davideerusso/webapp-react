@@ -7,7 +7,7 @@ export default function DefaultLayout() {
         <div className="nav-bar">
           <ul className="nav-inline container">
             <li className="link">
-              <NavLink to="/Movies">Movies</NavLink>
+              <NavLink to="/movies">Movies</NavLink>
             </li>
           </ul>
         </div>
