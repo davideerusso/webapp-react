@@ -90,8 +90,7 @@ export default function MoviesList() {
             <p>{movie.genre}</p>
             <p>{movie.release_year}</p>
             <p>{movie.abstract}</p>
-            <p>{movie.created_at}</p>
-            <p>{movie.updated_at}</p>
+            <p>{Math.ceil(movie.average_vote / 2)}</p>
             <Link to={`/movies/${movie.id}`}>Dettaglio</Link>
           </div>
         ))}

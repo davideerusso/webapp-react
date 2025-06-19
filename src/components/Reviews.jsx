@@ -1,12 +1,17 @@
-export default function Reviews({ name, vote, text }) {
+export default function Reviews({ reviews }) {
   return (
-    <div>
-      {name.map((n) => (
-        <h4>{n}</h4>
-      ))}
-      <h4>{name}</h4>
-      <p>{text}</p>
-      <p>{vote}</p>
-    </div>
+    <>
+      <div>
+        {reviews.map((r) => (
+          <>
+            <div>
+              <span>{r.name}</span>
+              <span>{r.text}</span>
+              <span>{r.vote}</span>
+            </div>
+          </>
+        ))}
+      </div>
+    </>
   );
 }
